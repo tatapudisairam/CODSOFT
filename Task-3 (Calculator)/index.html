@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="calculator.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <div class="calculator">
+            <div class="display">
+                <div class="operation">
+                    <div class="value"></div>
+                </div>
+                <div class="result">
+                    <div class="value">0</div>
+                </div>
+            </div>            
+            <div class="keys sai">
+                <button class="key action" name="clear" type="key"><span>AC</span></button>
+                <button class="key action" name="delete" type="key"><span>&lt;</span></button>
+                <button class="key action" name="percent" type="number"><span>%</span></button>
+                <button class="key operator" name="division" type="operator"><span>÷</span></button>
+                <button class="key" name="7" type="number"><span>7</span></button>
+                <button class="key" name="8" type="number"><span>8</span></button>
+                <button class="key" name="9" type="number"><span>9</span></button>
+                <button class="key operator" name="multiplication" type="operator"><span>x</span></button>
+                <button class="key" name="4" type="number"><span>4</span></button>
+                <button class="key" name="5" type="number"><span>5</span></button>
+                <button class="key" name="6" type="number"><span>6</span></button>
+                <button class="key operator" name="subtraction" type="operator"><span>-</span></button>
+                <button class="key" name="1" type="number"><span>1</span></button>
+                <button class="key" name="2" type="number" ><span>2</span></button>
+                <button class="key" name="3" type="number"><span>3</span></button>
+                <button class="key operator" name="addition" type="operator"><span>+</span></button>
+                <div class="key" onclick="toggleDrawer()"><span>&#8627;</span></div>
+                <button class="key" name="0" type="number"><span>0</span></button>
+                <button class="key" name="comma" type="number"><span>.</span></button>
+                <button class="key operator" name="calculate" type="calculate"><span>=</span></button>
+            </div>
+
+            <div class="drawer sai" id="drawer">
+                <div class="drawer-row">
+                    <button id="rad" class="key" name="rad" type="key"><span>rad</span></button>
+                    <button id="deg" class="key" name="deg" type="key"><span>deg</span></button>
+                    <button class="key" name="ln" type="math_function"><span>ln</span></button>
+                    <button class="key" name="log" type="math_function"><span>log</span></button>
+                </div>
+                <div class="drawer-row">
+                    <button class="key" name="sin" type="trigo_function"><span>sin</span></button>
+                    <button class="key" name="cos" type="trigo_function"><span>cos</span></button>
+                    <button class="key" name="tan" type="trigo_function"><span>tan</span></button>
+                    <button class="key" name="factorial" type="math_function"><span>x!</span></button>
+                </div>
+                <div class="drawer-row">
+                    <button class="key" name="asin" type="trigo_function"><span>sin<sup>-</sup></span></button>
+                    <button class="key" name="acos" symbol="acos" formula="inv_trigo(Math.acos," type="trigo_function"><span>cos<sup>-</sup></span></button>
+                    <button class="key" name="atan" symbol="atan" formula="inv_trigo(Math.atan," type="trigo_function"><span>tan<sup>-</sup></span></button>
+                    <button class="key" name="pi" symbol="π" formula="Math.PI" type="number"><span>π</span></button>                    
+                </div>
+                <div class="drawer-row">
+                    <button class="key" name="e" type="number"><span>e</span></button>
+                    <button class="key" name="square" type="math_function"><span>^</span></button>
+                    <button class="key" name="square-root" type="math_function"><span>√</span></button>
+                    <button class="key" name="power" type="math_function"><span>x²</span></button>
+                </div>
+                <div class="drawer-row">
+                    <button class="key" name="open-parenthesis" type="number"><span>(</span></button>
+                    <button class="key" name="close-parenthesis" type="number"><span>)</span></button>
+                    <button class="key" name="exp" type="math_function"><span>exp</span></button>
+                    <div class="toggle-btn" onclick="toggleDrawer()"><span>&#8626;</span></div>
+                </div>
+            </div>
+            
+            <div class="mode" onclick="changeMode()">
+                <i id="mode" class="fa-solid fa-sun"></i>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
